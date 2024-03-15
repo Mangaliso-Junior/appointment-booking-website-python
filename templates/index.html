@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Appointments</h1>
+        <ul>
+            {% for appointment in appointments %}
+                <li>{{ appointment[1] }} - {{ appointment[2] }} - {{ appointment[3] }}</li>
+            {% endfor %}
+        </ul>
+        {% if check_login() %}
+            <p class="link"><a href="{{ url_for('logout') }}" class="button">Logout</a></p>
+        {% endif %}
+        <a href="{{ url_for('book_appointment') }}" class="button">Book Appointment</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book Appointment</h1>
+            {% if check_login() %}
+                <p class="link"><a href="{{ url_for('logout') }}" class="button">Logout</a></p>
+            {% endif %}
+        </header>
+        <form method="post" action="{{ url_for('book_appointment') }}">
+            <label for="patient_name">Patient Name:</label>
+            <input type="text" name="patient_name" required>
+
+            <label for="doctor_name">Doctor Name:</label>
+            <input type="text" name="doctor_name" required>
+
+            <label for="appointment_date">Appointment Date:</label>
+            <input type="date" name="appointment_date" required>
+
+            <input type="submit" value="Book Appointment">
+        </form>
+        <p class="link">Already have an appointment? <a href="{{ url_for('index') }}">View Appointments</a></p>
+    </div>
+</body>
+</html>
