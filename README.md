@@ -3,7 +3,7 @@
   -  It allows clients to book appintments with doctors and view their booked appointments
 
 ## Project Context: 
-  This project was developed as a part of my Process Testing (PCT316D) module for my Diploma in Informatics at the Tshwane University of Technologyl. 
+  This project was developed as a part of my Process Testing (PCT316D) module for my Diploma in Informatics at the Tshwane University of Technology. 
   the goal is to show the various phases of the SDLC, including requirements gathering, design, implementation, testing and deployment.
 
 ### SDLC phases covered: 
